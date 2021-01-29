@@ -120,3 +120,8 @@ nav ul li a:hover, a.active{
     display: flex;
     justify-content: space-between;
 }
+
+button {
+    margin: 1px;
+    margin-top: 23px;
+}
