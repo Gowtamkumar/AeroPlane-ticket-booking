@@ -135,7 +135,7 @@
                 }
                 inputEconomy.value = economyNewCount;
                 // const totalPrice = economyNewCount * 100;
-                let totalTicketPrice= 0;
+                let totalTicketPrice = 0;
                 if (ticket == "economy") {
                     totalTicketPrice = economyNewCount * 100;
                 }
@@ -146,20 +146,20 @@
                 totalPrice();
             }
 
-            function totalPrice(){
+            function totalPrice() {
                 const firstClassInput = getInputValue('firstClass');
-                const economyInput  = getInputValue('economy');
-                
+                const economyInput = getInputValue('economy');
+
                 const SubTotalPrice = firstClassInput * 150 + economyInput * 100;
                 console.log(SubTotalPrice);
                 document.getElementById('subTotal').innerText = SubTotalPrice;
-                const vat =  SubTotalPrice * 0.1;
+                const vat = SubTotalPrice * 0.1;
                 document.getElementById('vat').innerText = vat;
 
                 const SubTotalWithVatPrice = SubTotalPrice + vat;
                 document.getElementById('total').innerText = SubTotalWithVatPrice;
             }
-            function getInputValue(ticket){
+            function getInputValue(ticket) {
                 const inputEconomy = document.getElementById(ticket + '-quantity');
                 const economyCount = parseInt(inputEconomy.value);
                 return economyCount;
